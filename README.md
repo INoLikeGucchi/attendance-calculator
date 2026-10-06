@@ -3,5 +3,5 @@ Web Dev 101 project. Enter your sessions and see how many classes you can still 
 
 Built with HTML, CSS and plain JavaScript. Saves your numbers with localStorage.
 
-Live site: (paste your GitHub Pages link here)
-Video: (paste your video link here)
+Live site: [(Here)](https://inolikegucchi.github.io/attendance-calculator/)
+Video: [(Here)](https://youtu.be/RriPcqR7s34)
