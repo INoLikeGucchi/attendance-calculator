@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Attendance Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Attendance Calculator</h1>
+    <p>How many classes can I still skip?</p>
+  </header>
+
+  <main>
+    <section class="card" aria-labelledby="input-heading">
+      <h2 id="input-heading">Your numbers</h2>
+      <form id="attendance-form">
+        <label for="semester">Semester / Subject name</label>
+        <input type="text" id="semester" placeholder="e.g. Sem 1 - Web Dev">
+
+        <label for="total">Total sessions in the semester</label>
+        <input type="number" id="total" min="1" placeholder="e.g. 60">
+
+        <label for="held">Sessions held so far</label>
+        <input type="number" id="held" min="0" placeholder="e.g. 30">
+
+        <label for="attended">Sessions you attended</label>
+        <input type="number" id="attended" min="0" placeholder="e.g. 26">
+
+        <label for="target">Target attendance %</label>
+        <input type="number" id="target" min="1" max="100" value="75">
+
+        <button type="button" id="reset-btn">Clear everything</button>
+      </form>
+    </section>
+
+    <section class="card" aria-live="polite" aria-labelledby="result-heading">
+      <h2 id="result-heading">Result</h2>
+      <p id="semester-label"></p>
+      <div id="result" class="result neutral">
+        <p class="big" id="big-text">Fill in the numbers above</p>
+        <p id="small-text"></p>
+      </div>
+      <p id="current-percent"></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Made for Web Dev 101 using HTML, CSS and JavaScript</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

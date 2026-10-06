@@ -1,0 +1,99 @@
+/* ---------- colours kept in one place ---------- */
+:root {
+  --bg: #f2f4f8;
+  --card: #ffffff;
+  --text: #222;
+  --green: #2e9e5b;
+  --red: #d64545;
+  --grey: #888;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+header, footer {
+  text-align: center;
+  padding: 20px 10px;
+}
+
+/* main uses flexbox: cards sit side by side on laptop */
+main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.card {
+  flex: 1 1 340px;
+  background: var(--card);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  display: block;
+  margin-top: 14px;
+  font-weight: bold;
+}
+
+/* big inputs so they are easy to tap on a phone */
+input {
+  width: 100%;
+  padding: 12px;
+  margin-top: 5px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+button {
+  margin-top: 20px;
+  padding: 12px 18px;
+  font-size: 1rem;
+  background: var(--grey);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* result box, colour changes with the class JS adds */
+.result {
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  color: white;
+}
+
+.result.neutral { background: var(--grey); }
+.result.safe    { background: var(--green); }
+.result.danger  { background: var(--red); }
+
+.big {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin: 0 0 8px;
+}
+
+#current-percent {
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+/* phone view: everything stacks and text shrinks a bit */
+@media (max-width: 600px) {
+  .big { font-size: 1.3rem; }
+  main { gap: 12px; }
+}
